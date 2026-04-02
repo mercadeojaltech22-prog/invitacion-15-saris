@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis 15 Años - Saris</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Script opcional para efecto de confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wine: '#722F37',
+                        rosegold: '#B76E79',
+                        blush: '#FDE2E4',
+                        marble: '#FCF4F6'
+                    },
+                    fontFamily: {
+                        'script': ['"Great Vibes"', 'cursive'],
+                        'sans': ['"Poppins"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fdf5f6;
+            scroll-behavior: smooth;
+        }
+
+        /* Ocultar el scrollbar pero permitir scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(183, 110, 121, 0.3);
+        }
+        
+        .coquette-border {
+            position: relative;
+        }
+        .coquette-border::before {
+            content: '';
+            position: absolute;
+            top: 4px; left: 4px; right: 4px; bottom: 4px;
+            border: 1px dashed rgba(183, 110, 121, 0.5);
+            border-radius: 1.2rem;
+            pointer-events: none;
+        }
+        
+        /* Fondo con el archivo exacto de tu carpeta (.png) */
+        .hero-background {
+            background-image: url('background.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .menu-card-image {
+            height: 140px;
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+        }
+    </style>
+</head>
+<body class="font-sans text-wine antialiased min-h-screen">
+
+    <main class="max-w-md mx-auto hero-background min-h-screen shadow-2xl relative pb-20 overflow-hidden">
+        
+        <!-- Capa blanca semitransparente para que el texto se lea mejor sobre el fondo -->
+        <div class="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
+
+        <!-- HERO SECTION -->
+        <header class="min-h-[90vh] flex flex-col justify-center items-center text-center px-8 relative z-10">
+            
+            <!-- Estructura equilibrada: Mis (pequeño) 15 (Gigante) Años (pequeño) -->
+            <div class="flex items-end justify-center gap-2 mt-8 mb-0">
+                <span class="font-sans text-lg tracking-[0.2em] text-wine/80 uppercase pb-6">Mis</span>
+                <span class="font-script text-[7.5rem] text-rosegold drop-shadow-md leading-none">15</span>
+                <span class="font-sans text-lg tracking-[0.2em] text-wine/80 uppercase pb-6">Años</span>
+            </div>
+            
+            <h1 class="font-script text-[8.5rem] text-wine drop-shadow-lg leading-none mt-0 mb-6">Saris</h1>
+            
+            <div class="w-24 h-[2px] bg-rosegold/70 mb-8"></div>
+            
+            <!-- Mensaje más pequeño (text-lg) con la última frase en Negrita -->
+            <div class="text-wine/90 text-lg leading-relaxed font-light italic px-4 bg-white/30 rounded-xl p-4 backdrop-blur-sm">
+                <p class="mb-2">"Será una noche para celebrar la vida y la alegría de compartir este momento tan especial con las personas que más quiero."</p>
+                <p class="font-bold text-center block not-italic text-wine drop-shadow-sm text-xl mt-3">¡Espero contar contigo!</p>
+            </div>
+
+            <!-- Botón Desliza -->
+            <a href="#detalles" class="absolute bottom-6 flex flex-col items-center animate-bounce text-rosegold/80 cursor-pointer p-3 px-4 bg-white/70 rounded-[2rem] shadow-sm backdrop-blur-sm">
+                <span class="text-[10px] font-sans tracking-widest uppercase mb-1 font-semibold text-wine/70">Desliza</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </header>
+
+        <!-- DETALLES DEL EVENTO -->
+        <section id="detalles" class="px-6 py-12 relative z-10">
+            <div class="glass-card coquette-border rounded-2xl p-8 text-center shadow-sm">
+                <h3 class="font-script text-5xl text-rosegold mb-6">Cuándo & Dónde</h3>
+                
+                <div class="flex flex-col gap-4 text-lg">
+                    <div class="flex items-center justify-center gap-3">
+                        <svg class="w-6 h-6 text-wine/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span class="font-medium">Sábado 11 de abril</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <svg class="w-6 h-6 text-wine/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span class="font-medium">9:00 PM</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <svg class="w-6 h-6 text-wine/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span class="font-medium">Frida Fusión (Provenza)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULARIO / MENÚ -->
+        <section class="px-6 py-8 relative z-10">
+            <h3 class="font-script text-5xl text-center text-wine mb-10 drop-shadow-sm bg-white/40 py-2 rounded-2xl backdrop-blur-sm">Confirma tu Menú 🎀</h3>
+            
+            <form id="rsvp-form" class="space-y-12">
+                
+                <!-- PASO 1: PLATO FUERTE -->
+                <div class="space-y-4">
+                    <h4 class="font-medium text-xl text-rosegold border-b-2 border-rosegold/30 pb-3 bg-white/30 px-2 rounded-t-lg">1. Plato Fuerte (Elige 1)</h4>
+                    
+                    <!-- Opción Taco Cerdo -->
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="plato" value="Taco de Cerdo al Pastor" class="peer sr-only" onchange="handleMainChange()">
+                            <img src="taco de Cerdo al pastor.jpeg" alt="Taco de Cerdo al Pastor" class="w-24 h-24 object-cover rounded-xl shadow-sm" onerror="this.src='https://via.placeholder.com/150/FDE2E4/722F37?text=Foto'">
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1 leading-tight">Taco de Cerdo al Pastor</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Opción Taco Birria -->
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="plato" value="Taco de Birria de Res" class="peer sr-only" onchange="handleMainChange()">
+                            <img src="Taco de Birria de res .jpeg" alt="Taco de Birria de Res" class="w-24 h-24 object-cover rounded-xl shadow-sm" onerror="this.src='https://via.placeholder.com/150/FDE2E4/722F37?text=Foto'">
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1 leading-tight">Taco de Birria de Res</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <!-- Opción Burro -->
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="plato" value="Burro" class="peer sr-only" onchange="handleMainChange('sub-burro')">
+                            <img src="burro.jpeg" alt="Burro" class="w-24 h-24 object-cover rounded-xl shadow-sm" onerror="this.src='https://via.placeholder.com/150/FDE2E4/722F37?text=Foto'">
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1 leading-tight">Burro</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                        <!-- SUBMENÚ INTERNO -->
+                        <div id="sub-burro" class="hidden px-5 pb-5 pt-3 border-t border-rose-100/50 bg-rose-50/50">
+                            <p class="text-sm text-wine/90 mb-3 font-medium">¿De qué te gustaría tu Burro?</p>
+                            <div class="flex flex-wrap gap-2">
+                                <label><input type="radio" name="plato_sub" value="Pollo" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Pollo</span></label>
+                                <label><input type="radio" name="plato_sub" value="Res" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Res</span></label>
+                                <label><input type="radio" name="plato_sub" value="Mixto" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Mixto</span></label>
+                                <label><input type="radio" name="plato_sub" value="Vegetariano" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Vegetariano</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Opción Fajitas -->
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="plato" value="Fajitas" class="peer sr-only" onchange="handleMainChange('sub-fajitas')">
+                            <img src="fajitas.jpeg" alt="Fajitas" class="w-24 h-24 object-cover rounded-xl shadow-sm" onerror="this.src='https://via.placeholder.com/150/FDE2E4/722F37?text=Foto'">
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1 leading-tight">Fajitas</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                        <!-- SUBMENÚ INTERNO -->
+                        <div id="sub-fajitas" class="hidden px-5 pb-5 pt-3 border-t border-rose-100/50 bg-rose-50/50">
+                            <p class="text-sm text-wine/90 mb-3 font-medium">¿De qué te gustarían tus Fajitas?</p>
+                            <div class="flex flex-wrap gap-2">
+                                <label><input type="radio" name="plato_sub" value="Pollo" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Pollo</span></label>
+                                <label><input type="radio" name="plato_sub" value="Res" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Res</span></label>
+                                <label><input type="radio" name="plato_sub" value="Mixtas" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Mixtas</span></label>
+                                <label><input type="radio" name="plato_sub" value="Vegetariano" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Vegetariano</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Opción Quesadilla -->
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="plato" value="Quesadilla" class="peer sr-only" onchange="handleMainChange('sub-quesadilla')">
+                            <img src="quesadilla.jpeg" alt="Quesadilla" class="w-24 h-24 object-cover rounded-xl shadow-sm" onerror="this.src='https://via.placeholder.com/150/FDE2E4/722F37?text=Foto'">
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1 leading-tight">Quesadilla</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                        <!-- SUBMENÚ INTERNO -->
+                        <div id="sub-quesadilla" class="hidden px-5 pb-5 pt-3 border-t border-rose-100/50 bg-rose-50/50">
+                            <p class="text-sm text-wine/90 mb-3 font-medium">¿De qué te gustaría tu Quesadilla?</p>
+                            <div class="flex flex-wrap gap-2">
+                                <label><input type="radio" name="plato_sub" value="Pastor" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Pastor</span></label>
+                                <label><input type="radio" name="plato_sub" value="Birria" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Birria</span></label>
+                                <label><input type="radio" name="plato_sub" value="Camarones" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Camarones</span></label>
+                                <label><input type="radio" name="plato_sub" value="Vegetariano" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Vegetariano</span></label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Opción Bife -->
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="plato" value="Bife Chorizo 300 Gr" class="peer sr-only" onchange="handleMainChange()">
+                            <img src="Bife Chorizo 300 gr.jpeg" alt="Bife Chorizo 300 Gr" class="w-24 h-24 object-cover rounded-xl shadow-sm" onerror="this.src='https://via.placeholder.com/150/FDE2E4/722F37?text=Foto'">
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1 leading-tight">Bife Chorizo 300 Gr.</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- PASO 2: POSTRE -->
+                <div class="space-y-4 pt-4">
+                    <h4 class="font-medium text-xl text-rosegold border-b-2 border-rosegold/30 pb-3 bg-white/30 px-2 rounded-t-lg">2. Postre (Elige 1)</h4>
+                    
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="postre" value="Churros" class="peer sr-only">
+                            <img src="churros.jpeg" alt="Churros" class="w-24 h-24 object-cover rounded-xl shadow-sm" onerror="this.src='https://via.placeholder.com/150/FDE2E4/722F37?text=Foto'">
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1">Churros</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="postre" value="Marquesita de Frutas" class="peer sr-only">
+                            <img src="Marquesita de frutas.jpeg" alt="Marquesita de Frutas" class="w-24 h-24 object-cover rounded-xl shadow-sm" onerror="this.src='https://via.placeholder.com/150/FDE2E4/722F37?text=Foto'">
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1">Marquesita de Frutas</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- PASO 3: BEBIDA -->
+                <div class="space-y-4 pt-4">
+                    <h4 class="font-medium text-xl text-rosegold border-b-2 border-rosegold/30 pb-3 bg-white/30 px-2 rounded-t-lg">3. Bebida (Elige 1)</h4>
+                    
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="bebida" value="Sodas" class="peer sr-only" onchange="handleDrinkChange('sub-sodas')">
+                            <div class="w-20 h-20 bg-rose-50 rounded-xl flex items-center justify-center text-3xl shadow-sm border border-rose-100">🍹</div>
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1">Sodas</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                        <div id="sub-sodas" class="hidden px-5 pb-5 pt-3 border-t border-rose-100/50 bg-rose-50/50">
+                            <p class="text-sm text-wine/90 mb-3 font-medium">Sabor de Soda:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <label><input type="radio" name="bebida_sub" value="Maracuyá" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Maracuyá</span></label>
+                                <label><input type="radio" name="bebida_sub" value="Frutos Rojos" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Frutos Rojos</span></label>
+                                <label><input type="radio" name="bebida_sub" value="Lychee" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Lychee</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="bebida" value="Jugos" class="peer sr-only" onchange="handleDrinkChange('sub-jugos')">
+                            <div class="w-20 h-20 bg-rose-50 rounded-xl flex items-center justify-center text-3xl shadow-sm border border-rose-100">🧃</div>
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1">Jugos</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                        <div id="sub-jugos" class="hidden px-5 pb-5 pt-3 border-t border-rose-100/50 bg-rose-50/50">
+                            <p class="text-sm text-wine/90 mb-3 font-medium">Sabor de Jugo:</p>
+                            <div class="flex flex-wrap gap-2">
+                                <label><input type="radio" name="bebida_sub" value="Mango" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Mango</span></label>
+                                <label><input type="radio" name="bebida_sub" value="Mora" class="peer sr-only"><span class="px-4 py-2 bg-white border border-rosegold/30 rounded-full text-sm peer-checked:bg-wine peer-checked:text-white cursor-pointer transition-colors shadow-sm">Mora</span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/90 border border-rose-100 rounded-2xl shadow-sm transition-all overflow-hidden has-[:checked]:border-rosegold has-[:checked]:ring-2 has-[:checked]:ring-rosegold/50">
+                        <label class="cursor-pointer flex items-center p-3 gap-4 group">
+                            <input type="radio" name="bebida" value="Coca Cola" class="peer sr-only" onchange="handleDrinkChange()">
+                            <div class="w-20 h-20 bg-rose-50 rounded-xl flex items-center justify-center text-3xl shadow-sm border border-rose-100">🥤</div>
+                            <span class="text-lg font-medium text-wine group-hover:text-rosegold transition-colors flex-1">Coca Cola</span>
+                            <div class="w-6 h-6 rounded-full border-2 border-rose-200 peer-checked:border-rosegold peer-checked:bg-rosegold flex items-center justify-center mr-2 transition-all">
+                                <div class="w-2.5 h-2.5 bg-white rounded-full hidden peer-checked:block"></div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- NOMBRE DEL INVITADO -->
+                <div class="space-y-4 pt-6">
+                    <label for="guest_name" class="block font-medium text-xl text-rosegold drop-shadow-sm">Tu Nombre</label>
+                    <input type="text" id="guest_name" placeholder="Ej. Familia Pérez o Camila Gómez" class="w-full p-5 bg-white/90 border border-rose-200 rounded-xl focus:outline-none focus:border-rosegold focus:ring-2 focus:ring-rosegold/50 shadow-sm placeholder-wine/40 text-lg">
+                </div>
+
+                <!-- BOTÓN DE ENVÍO -->
+                <div class="pt-8 pb-8">
+                    <button type="button" onclick="submitRSVP()" class="w-full bg-rosegold hover:bg-wine text-white font-medium text-xl py-5 rounded-full transition-all shadow-lg shadow-rosegold/30 flex items-center justify-center gap-3 hover:scale-[1.02]">
+                        <!-- Icono de WhatsApp -->
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 4.228 4.34-1.138c.977.545 1.974.86 3.135.86 3.179 0 5.766-2.587 5.766-5.767 0-3.179-2.587-5.766-5.781-5.766zm6.127 10.627l-2.849.744c-.754.195-1.445.407-2.02.615-.638-.414-1.411-.833-2.252-1.211l-.243-.11c-1.399-.631-2.551-1.324-3.597-2.37l-.016-.015c-.994-1.009-1.674-2.167-2.299-3.565l-.09-.204c-.349-.791-.732-1.52-1.106-2.123l.548-1.8c.617-.185 1.236-.357 1.861-.536l.143.484c.188.635.488 1.619 1.025 2.683.243.481.241.88-.005 1.156-.136.151-.304.331-.502.54-.267.28-.558.586-.835.879-.167.176-.204.411-.101.634 1.114 2.425 2.984 4.351 5.231 5.401.225.104.493.083.679-.086 1.041-.964 1.834-1.697 2.273-2.105.141-.132.416-.139.546.005l.015.016c1.173.592 2.263 1.084 3.279 1.544l.186.083.305 1.038c-1.079.863-2.025 1.618-2.818 2.249-.412.327-.683.559-.955.774zM12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                        Enviar Confirmación
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Modal de Validación (Mensajes) -->
+    <div id="validation-modal" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-sm flex items-center justify-center px-4">
+        <div class="bg-white rounded-3xl p-8 max-w-sm w-full shadow-2xl text-center transform scale-95 transition-transform duration-300 border border-rosegold/20">
+            <div class="text-5xl mb-4">🎀</div>
+            <h3 class="text-2xl font-script text-wine mb-4">¡Casi listo!</h3>
+            <p id="validation-message" class="text-wine/80 mb-8 text-base"></p>
+            <button onclick="closeModal()" class="bg-rosegold text-white px-8 py-3 rounded-full font-medium hover:bg-wine transition-colors shadow-md">
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts de Lógica Condicional y Envío -->
+    <script>
+        function handleMainChange(subIdToShow = null) {
+            document.getElementById('sub-burro').classList.add('hidden');
+            document.getElementById('sub-fajitas').classList.add('hidden');
+            document.getElementById('sub-quesadilla').classList.add('hidden');
+            
+            const subRadios = document.querySelectorAll('input[name="plato_sub"]');
+            subRadios.forEach(radio => radio.checked = false);
+
+            if (subIdToShow) {
+                document.getElementById(subIdToShow).classList.remove('hidden');
+            }
+        }
+
+        function handleDrinkChange(subIdToShow = null) {
+            document.getElementById('sub-sodas').classList.add('hidden');
+            document.getElementById('sub-jugos').classList.add('hidden');
+            
+            const subRadios = document.querySelectorAll('input[name="bebida_sub"]');
+            subRadios.forEach(radio => radio.checked = false);
+
+            if (subIdToShow) {
+                document.getElementById(subIdToShow).classList.remove('hidden');
+            }
+        }
+
+        function showModal(message) {
+            document.getElementById('validation-message').innerText = message;
+            const modal = document.getElementById('validation-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('validation-modal');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 200);
+        }
+
+        // Lógica de Envío a WhatsApp + Confeti
+        function submitRSVP() {
+            const platoNode = document.querySelector('input[name="plato"]:checked');
+            const postreNode = document.querySelector('input[name="postre"]:checked');
+            const bebidaNode = document.querySelector('input[name="bebida"]:checked');
+            const nombre = document.getElementById('guest_name').value.trim();
+
+            if (!nombre) {
+                showModal('Por favor ingresa tu nombre para saber quién nos acompaña. ✨');
+                return;
+            }
+
+            if (!platoNode) {
+                showModal('¡Elige el plato fuerte que más te guste! 🍽️');
+                return;
+            }
+            let platoText = platoNode.value;
+            if (['Burro', 'Fajitas', 'Quesadilla'].includes(platoText)) {
+                const subPlatoNode = document.querySelector('input[name="plato_sub"]:checked');
+                if (!subPlatoNode) {
+                    showModal(`Elegiste ${platoText}, pero falta que nos digas de qué lo prefieres. 🌮`);
+                    return;
+                }
+                platoText += ` (De ${subPlatoNode.value})`;
+            }
+
+            if (!postreNode) {
+                showModal('¡No te olvides del postre! 🍰');
+                return;
+            }
+            const postreText = postreNode.value;
+
+            if (!bebidaNode) {
+                showModal('Elige una bebida para acompañar tu cena. 🥂');
+                return;
+            }
+            let bebidaText = bebidaNode.value;
+            if (['Sodas', 'Jugos'].includes(bebidaText)) {
+                const subBebidaNode = document.querySelector('input[name="bebida_sub"]:checked');
+                if (!subBebidaNode) {
+                    showModal(`Elegiste ${bebidaText}, selecciona tu sabor favorito. 🍹`);
+                    return;
+                }
+                bebidaText += ` (${subBebidaNode.value})`;
+            }
+
+            // Si llegamos hasta aquí, todo está validado. Disparamos el confeti 🎊
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#B76E79', '#722F37', '#FDE2E4', '#FFD700']
+            });
+
+            // Y preparamos el envío a WhatsApp con un pequeño retraso para que vean el confeti
+            setTimeout(() => {
+                const numeroDestino = "573046782717";
+                const mensaje = `¡Hola! Confirmo mi asistencia a los 15 de Saris. 🎉\n\n` +
+                                `*Nombre:* ${nombre}\n\n` +
+                                `*Mi menú elegido:*\n` +
+                                `🍽️ Plato fuerte: ${platoText}\n` +
+                                `🍰 Postre: ${postreText}\n` +
+                                `🥂 Bebida: ${bebidaText}\n\n` +
+                                `¡Nos vemos ahí! ✨`;
+
+                const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensaje)}`;
+                window.open(url, '_blank');
+            }, 1200); // Espera poco más de 1 segundo antes de abrir WhatsApp
+        }
+    </script>
+</body>
+</html>
