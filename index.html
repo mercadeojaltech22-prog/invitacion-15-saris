@@ -81,10 +81,13 @@
 </head>
 <body class="font-sans text-wine antialiased min-h-screen">
 
-    <main class="max-w-md mx-auto hero-background min-h-screen shadow-2xl relative pb-20 overflow-hidden">
+   <main class="max-w-md mx-auto min-h-screen shadow-2xl relative pb-20 overflow-hidden">
         
-        <!-- Capa blanca semitransparente para que el texto se lea mejor sobre el fondo -->
-        <div class="absolute inset-0 bg-white/40 backdrop-blur-[1px]"></div>
+        <div class="fixed inset-x-0 mx-auto w-full max-w-md h-screen z-[-2]">
+            <img src="background.png" class="w-full h-full object-cover object-top" alt="">
+        </div>
+
+        <div class="fixed inset-x-0 mx-auto w-full max-w-md h-screen bg-white/40 backdrop-blur-[1px] z-[-1]"></div>
 
         <!-- HERO SECTION -->
         <header class="min-h-[90vh] flex flex-col justify-center items-center text-center px-8 relative z-10">
